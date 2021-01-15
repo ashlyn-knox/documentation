@@ -1,0 +1,45 @@
+= Mental Models and UX Design
+
+.Development Methods
+Agile Method::
+Allows for testing and feedback while developing.
+Small changes more regularly.
+This is focused on adaptive planning, self-organization, and short delivery times.
+
+Waterfall Method:: 
+Project sees little user feedback before release.
+Big changes over longer time periods.
+Breaks down the project into linear sequential phases that are rigidly followed.
+.Phases
+1. Analysis
+2. Design
+3. Construction
+4. Testing
+5. Deployment
+6. Maintenance
+* These phases are described in the link:https://en.wikipedia.org/wiki/Waterfall_model[wikipedia article]
+
+.Neural Networks
+1. Higher Brain
+2. Mid brain
+3. Lower Brain
+
+.User Interaction Problems vs Systems Model Problems
+* Consider false positives regarding the rocket switch gear shift
+- The lizard brain doesn't know that there is a problem.
+that's the worst kind of problem
+* false positives don't happen that much in software.
+An issue happened with Playstation 5 sales when it was released.
+* Reflect on conventions from jan11 reading notes.
+- conventions tend to have some sort of que, be it visual or tactile.
+- consider users' expected design conventions
+- The building of new interfaces is an art, a balance between convention and innoviation
+
+.Relevant Literature
+* Review chapters 1-3 in "Don't Make Me Think"
+* Review UX Design Mental Models
+* Review Accessibility and JAWS screen reader
+
+.Accessibility Resources
+* link:https://developer.mozilla.org/en-US/docs/Web/Accessibility[Mdn Docs]
+* link:https://www.youtube.com/watch?v=7mqqgIxX_NU&feature=youtu.be[Firefox Accessiblity Inspector]

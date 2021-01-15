@@ -1,0 +1,155 @@
+= Visual Hierarchy in Design
+Jan 13, 2021
+
+== Assignment 1 Notes
+* Our ideas of whether or not something is or is not a good example is less important in the grading then how well we put the content together.
+* assignment will be based on a meta analysis of my analysis - the structure of my critique.
+* Key question of how my work will be assessed - "Do I write work that is scannable? that can be easily moved into small cards"
+* Use exact terms that we are using in class and apply them to the website, 11 principles will be important
+* review my formatting against the rubrick
+* always zip files when submitting to brightspace, even if it's one file
+
+* Find link:https://github.com/sait-wbdv/assessments/tree/master/dsgn270/design/assignment-1[assignment information here]
+
+== 11 Design Principles
+
+Use these to frame analysis of web design.
+Remember to consider not only what's good and bad, but why they are good and bad, and what is perceivable intention behind design approaches - good and bad.
+Also, when critiquing, consider what could be done better and take note of why you think that.
+
+.Principles
+Size and Scale::
+Size variation and scale of items in the view
+Perspective::
+Create illusion of depth
+Color and Contrast::
+Draw attention by providing focal points
+Typography::
+Contrasting typefaces to convey importance
+Proximity::
+Conveys meaning and can create tensions
+Negative Space::
+Draw the eye by removing information
+Alignment::
+How elements are justified.
+For instance, people who read left to right tend to read in an F direction.
+Rule of odds::
+Images are more appealing when there are odd numbers
+Repetition::
+Repetition causes a feeling of unity and cohesiveness by creating patterns
+Leading Lines::
+Grab users attention and directs gaze.
+Can be actual lines, can also be people looking at elements on the page.
+Rule of Thirds::
+Divide design into a 3x3 grid with each intersection being a focal point.
+
+.Resources
+* https://www.youtube.com/watch?v=ZXItTIjC0Wk&feature=youtu.be[Video Link]
+* link:https://sait-wbdv.github.io/winter-2021/cheatsheets/design/visual-hierarchy/[Prof Notes]
+
+=== Questions that may be helpful (not from class discussion)
+* What works, and what doesn't?
+* Why do these things work or not?
+* What perceived constraints was the developer working within?
+* How is the developer solving a given problem?
+* Who is the intended audience?
+* When was this developed (older vs modern design ideas)?
+* Where on the page are elements?
+* Does it make me think to figure out how to use it?
+* Is it scannable?
+
+
+== Print Design
+* Certain analogies in print don't translate well to web such as 3 column magazine layout
+
+=== Print Design Elements
+There are a lot of elements that have cognates between web and print design.
+
+* Heading
+* Caption
+* Illustration/Figure
+* Keyline (same as a border in web)
+* photo credits (attributions in web)
+* callout box (block quote in web)
+
+There is no book analogy for web design.
+The closest thing would be that the entire website is the book.
+
+TIP: Write HTML so that googlebot can read it well.
+Consider googlebot your more important blind user.
+
+== Web Design
+An overview of the main web design techologies.
+What they are used for, and some notes on how they are used.
+
+=== HTML
+.Responsible for:
+1. Content
+2. Structure (Taxonomy)
+3. Meaning (semantics)
+
+=== CSS
+.Resonsible for:
+1. Presentation
+2. Typography
+3. Color
+4. Layout
+5. Imagery
+6. Animation
+- transitions and keyframes
+
+=== Javascript
+.Responsible for:
+1. Behaviour
+- There is some crossover between css and javascript
+
+=== Conventions
+Conventions::
+Popular design patterns that evolve over time as users become more knowledgeable.
+An audience has pre-defined expectations that fall into 3 categories.
+- How things work
+- How things look
+
+IMPORTANT: Proper usage of tags will be graded.
+Remember to ask questions and verify on section, article, div etc.
+
+.Making web pages **scannable**
+1. Create visual hierarchies
+2. Design content for cards
+3. Extras
+
+TIP: For readability, use tools to verify contrast.
+Don't leave this to guessing.
+
+IMPORTANT: See link:https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/[Designing Card based user interfaces]
+
+.Design Patterns
+So much stuff! we talked about cards today, but go to link:http://ui-patterns.com/patterns[the UI patterns website] for a good resource of these.
+Cards::
+Cards are used to display content composed of different elements. Check out information on these at link:http://ui-patterns.com/patterns/cards[the ui-patterns site]
+
+==== Usability
+It's important to make scannable pages with good visual hierarchy.
+NOTE: Check out link:https://www.nngroup.com/[The Nielsen Norman Group] for information on web conventions and usability.
+
+=== Some notes on SEO
+This course is created with SEO in mind.
+Performance and responsiveness are important to SEO.
+
+.How google ranks websites
+1. Performance
+2. Mobile Friendliness
+3. Who is linking to you
+* Linking to you is more important thank using metatags and keywords.
+Link farms don't work anymore.
+Write content that is good for humans and google will figure it out.
+
+== Markdown
+Markdown is a templating language.
+This makes it easier to blog and write quick websites.
+
+* TODO Find cognates with asciidoc.
+
+* Check the link:https://www.markdownguide.org/cheat-sheet/[cheat sheet] for reference
+
+
