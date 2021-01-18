@@ -1,0 +1,45 @@
+= Mobile Fundamentals
+
+Theory and capabilities of mobile phones and how to design for mobile.
+The Mozilla Developer Network will be used as the programmming textbook for this course.
+
+* Review Mobile-stats cheatsheet for information on statistics and trends in web usage
+
+== Mobile vs Desktop
+People tend to use mobile sites for less time than on desktop.
+People do faster searches on mobile whereas they will do more research focus on 
+
+Bounce Rate::
+A high bounce rate means that users leave the site quicktly.
+Generally a high bounce rate isn't a good thing.
+Mobile tends to have a higher bounce rate.
+
+== How is Mobile unique?
+Notes from group discussion
+.In what ways are mobiles different from desktops?
+* It can make browsing and communication easier
+* Better user tunnelling
+
+.Hardware specifications
+* screen rotate
+* better cameras
+* accelerometor
+* tap pay
+* rfib
+* biometric authentication
+* arm chips
+* depth perception (multiple cameras)
+
+.How does this affect behaviour on line?
+
+.What problems are phones trying to solve
+* quick facts
+* 
+
+.Performance Note
+Ads will generate revenue, but they will push google's indexing down.
+
+== Tools
+* Chrome's lighthouse is a better performance auditor than what Firefox offers
+
+
