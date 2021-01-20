@@ -1,0 +1,75 @@
+= Copyright and Licensing Notes
+
+Review prof's notes link:https://sait-wbdv.github.io/winter-2021/cheatsheets/copyright/[copyright cheatsheet]
+
+== Creative Commons, public domain, and copyright
+[IMPORTANT] include all licensing information in the README.md
+
+**If you use open source works, it may effect the license of your work.**
+
+.link:https://creativecommons.org/licenses/[Information about creative commons licenses]
+Attribution CC::
+Others can distribute, remix, adapt and build upon your work as long as they credit you for original creation.
+
+Attribution-ShareAlike::
+Lets others remix, adapt, and build upon your work even for commerical purpose.
+Compared to copyleft free and open source software licenses
+
+Attribution-NoDerivs::
+Others can reuse the work for any purpose, but they cannot share it in adapted form and they must provide credit to you.
+
+[IMPORTANT] Mit license protects the user.
+It stops the complete opening up of your software and computer that can be experienced with totally open source licenses.
+
+Risk of licenses::
+link:https://www.synopsys.com/blogs/software-security/top-open-source-licenses/[An overview of licenses, risk assessments, and popularity]
+
+Due Diligence::
+We make mistakes and won't be fucked by that, but not doing your due dilligence is a way that you will be held accountable.
+
+.Levels of Copyright
+1. Copyright
+* anything written down
+* cannot copyright rules like game mechanics
+* can copyright physically written and created content
+* same can be said for sound recordings
+2. trademarks
+3. Intellectual Property
+* protection of inventions
+
+=== Copyright time
+* In Canada it is 40 years
+* In America is is 70 years
+* When you sell copyright, the time starts at the point of sale
+* These dates are relevant to when copyright is sold or owner dies
+This is why Cinderella movies can be made.
+However this isn't the same with Mickey Mouse because that is a trademark
+
+== Creative Commons
+
+== Fair Dealing in Canada
+The use of copyright work without license.
+In Canada you can use that content in a fair use situation.
+
+* research
+* private study
+* education
+* parody
+* satire
+* criticism
+* review
+* news reporting
+
+=== 6 factor test to determine if copyright falls within fair dealings exception
+1. Purpose of proposed copying
+2. Character of proposed copying (single or mutliple copies etc)
+3. Amount of the dealings
+4. Alternatives 
+5. Nature
+6. Effect
+
+== American Copyright Resources
+LegalEagle is a youtube site for this
+
+
+

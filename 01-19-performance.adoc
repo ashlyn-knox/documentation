@@ -1,0 +1,39 @@
+= Performance
+
+Use performance and network tools to check assets and performance ratings.
+Chrome tends to have better performance tools than firefox.
+
+[NOTE] Everything added to the site makes it take a performance hit.
+This can all be checked in the Network tools
+
+== Paints
+A site loads in the following order.
+Each step takes time and resources.
+1. first paint
+2. first contentful paint
+3. first meaningful paint
+
+[NOTE] If you don't set the dimensions of an image, then the site will run heavier.
+This is because as the DOM is loading the content, it doesn't know how much space to paint the layout with.
+This means the page must be repainted
+
+First Contentful Paint (FCP)::
+Measures how long it takes the browser to render the first piece of DOM content after a user navigates to the page.
+
+.Dom content 
+* Images
+* non-white <canvas> elements
+* svgs
+
+First Meaningful Paint (FMP)::
+One of six metrics tracked in performance setion of lighthouse.
+This measures the primary content of a page that is visible to a user.
+* measured in time
+* calculates time between page load and page render above-the-fold content
+
+== Analysis with lighthouse
+A lighthouse performance analysis will give opportunities to fix the websites load time.
+[IMPORTANT] These numbers are relevant to the system you are viewing them on.
+Audits should be run on multiple machines and then an average should be determined.
+* This tool can be used for client meetings
+* firefox has a lighthouse extension if you want to use it there (compare these ratings)
