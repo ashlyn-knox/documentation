@@ -1,0 +1,80 @@
+= CSS Notes
+A quick overview of some important commands.
+I'm not including stuff that I"m already comfortable with.
+
+
+== Attribute selectors
+* Multiple classes can be used
+* order of classes defined in the html element doesn't matter
+* order of classes declared in css style does matter
+* Id overrides class
+* inline style overrides 
+* Add `!IMPORTANT` to the class to override everything
+** example: `color: red !important;`
+Multiple Classes::
+`<tag class="class1, class2">`
+* Make sure to include multiple classes within the same class="" tag
+
+=== id artributes
+* especially useful for javascript
+* these must be unique
+* use # in the css
+* **not reusable**
+
+type attribute::
+`[attr=value]`
+* selector matches and styles elements within a specific attribute value
+
+== Custom CSS Variables
+These can be used elsewhere in the css file
+
+Custom variable syntax::
+`--variableName: value;`
+
+Reference custom variables in other css rules::
+`background: var(--variableName);`
+
+Fallbacks::
+`background: var(--variableName, fallbackValue)`
+* It can be a good idea too use fallback values for when browsers fail to render cerntain things.
+This is especially important for old browsers.
+* Set fallbacks before the preferred one
+
+== Layout
+
+Padding::
+controls space between element's content and its border
+* Can be specified in one line, clockwise.
+** `paddding: top right bottom left;`
+
+Margin::
+space between an element's border and surrounding elements
+* use negative space to make an element grow larger
+* can be specified in one line clockwise just like padding
+** `margin: top right bottom left;`
+== Typography
+
+=== link external fonts
+
+Link to HTML::
+`<link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">`
+
+== Images
+
+
+=== borders
+
+* border-color
+* border-width
+* border-style
+
+Rounded Corners::
+`border-radius`
+* can be done as a percent or with pixels.
+* 50% is perfectly round
+
+== Relative Units
+
+em::
+size based on the size of an elements font.
+If used to set a font-size, it is relative to the parent's font size

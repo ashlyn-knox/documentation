@@ -1,0 +1,40 @@
+= HTML tag notes
+
+== body
+content text goes here
+
+== div
+
+== doctype
+used to set up page
+`<!DOCTYPE html>
+<html>
+<!-- Code goes here -->
+</html>`
+
+== form
+Code examples and descriptions of different tags
+
+=== input
+
+==== radio
+`<label for="label-name">
+<input type="radio" name=test-name">Text</label>`
+* TODO create descriptions of how to use:
+** label
+** input
+** form
+** type
+** name
+* TODO review security protocols regarding server side inputs
+* radio buttons vs checkboxes
+
+==== checkboxes
+`<label for="label-name">
+<input type="checkbox" name=test-name">Text</label>`
+
+* set checkboxes to be automatically checked with "checked"
+`<input type="radio" name="test-name" checked>`
+
+== head
+Used for metadata

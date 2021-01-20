@@ -29,17 +29,79 @@ Notes from group discussion
 * biometric authentication
 * arm chips
 * depth perception (multiple cameras)
+* landscape(desktop) vs portrait (mobile)
+* location
+* no cursor no hover
 
-.How does this affect behaviour on line?
 
 .What problems are phones trying to solve
 * quick facts
-* 
 
 .Performance Note
 Ads will generate revenue, but they will push google's indexing down.
 
-== Tools
-* Chrome's lighthouse is a better performance auditor than what Firefox offers
+== Common Mobile Design Patterns
+How are standards of html, css, and javascript evolved to take advantage of the mobile web.
 
+=== Terminology
 
+Breakpoint::
+Points in responsive design where website presentation obviously changes due to changing viewport chracteristics (width, orientation, etc)
+There will be small breakpoint shifts in resolution and layout as viewport is resized, big breakpoints are really important to set, like 1024px, 700px...
+* review graph png that shows breakpoint to optimal screen size.
+
+Cards::
+Break elements into small card units for localized customization.
+Flexbox is great for cards.
+
+Adaptive Web::
+A specific site used for each device.
+Outdated.
+Multiple versions of the same site for different devices.
+Not good for future proofing
+
+Clamp::
+Used to make responsive font size.
+Check out the https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()[MDN Docs] for information on this.
+* `font-size: clamp(minpx, #vw, maxpx);`
+* clamp is a little rigid in it's ratio setting
+Content Parity::
+Content served to phone is the same as what's sent to the desktop.
+
+DOM (Document Object Model)::
+This reads each of the files and loads the version of the website given into memory.
+How the website looks to a computer.
+
+Hamburger menu::
+little site menu icon thing
+
+Fluid Typography::
+Responsive resizing of typgraphy with viewport units.
+The math for how to do this with calc expressions can be found https://css-tricks.com/snippets/css/fluid-typography/[here]
+You can now use clamp which is much easier, it is based off the above calc expression.
+
+Media Quieries::
+Conditional code.
+The code only runs if a condition is true.
+Used to be the only way to do responsive design.
+Css Grid makes this not so important.
+
+Responsive Web::
+Focused on making sites look and behave optimally on all devices, from desktop to mobile, using hte same served web files
+
+Viewport::
+Viewable area of a website
+
+Viewport Units::
+Define size of elements by the size of the viewport.
+* you can make some content invisible until viewport is certain size etc.
+
+== Responsive Fundamentals
+* 400px to min of 2000px for screen sizes.
+* text is most readable at line lengths between 30 and 90 characters long.
+** Fontsize should be smaller on mobile
+** set a maximum width of no more than 90 char
+*** max width and another property can be used to keep text between 30 and 90 char
+* Scroll Track and max line length are important.
+Review course information on this.
+There is a code pen example on Tony's account.
