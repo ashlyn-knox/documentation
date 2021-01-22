@@ -1,0 +1,39 @@
+= Page Structure, Navigation, Semantics, and HTML Images
+This lecture examines best practices for overall page structure.
+
+== Important Course links
+* link:https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure[Documentation and website structure | MDN]
+* link:https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML[Images in HTML | MDN]
+* link:https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists[Styling Lists | MDN]
+* link:https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links[Styling Links | MDN]
+* link:https://www.sarasoueidan.com/blog/hex-rgb-to-hsl/[Colour | HEX & RGB vs HSL]
+* link:https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast[Colour Contrast | MDN]
+* link:https://css-tricks.com/snippets/css/a-guide-to-flexbox/[Flexbox | CSS-Tricks Gudie]
+
+== General Notes
+Definitions and usage tips for html tags
+
+article::
+For longer text elements.
+
+div::
+General one size fits all tag, use when no other type works.
+
+footer::
+Author information, copyright data, links to related documents
+
+header::
+Introductory content, typically a group of navigation or introductory aids.
+
+main::
+Dominant content of the body of a document.
+For content directly related to or expands upon the central topic of a document.
+
+nav::
+
+section::
+A standalone section, usually has a heading.
+
+span::
+An inline container.
+No special attributes but can be customized
