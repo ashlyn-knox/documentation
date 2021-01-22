@@ -15,7 +15,77 @@ Multiple Classes::
 `<tag class="class1, class2">`
 * Make sure to include multiple classes within the same class="" tag
 
-=== id artributes
+== Pseudo Elements
+add something before or after the selected element
+* `::before`
+* `::after`
+example::
+`div::before {}`
+content::
+required when using pseudo elements
+* set to "" if you're creating a shape
+
+== Animations
+animation-name::
+set the name of the animation
+
+@keyframes::
+make the animation do something
+
+animation-duration::
+set the duration of the animation
+* can use ms or s
+=== Example
+create the animation::
+`#idName {
+animation-name: rainbow;
+animation-duration: 5s;
+}`
+set the animation properties::
+`@keyframes rainbow {
+        0% {
+        background-color: green;
+        }
+        50% {
+        background-color: blue;
+        }
+        100% {
+        background-color: red;
+        }
+}`
+
+===== Effects
+This will make whatever is set to that id fluctuate between green blue red
+
+animation-fill-mode::
+This is useful for for things like having a button change colour on hover.
+if the @keyframes is just set as a 100% value, it will flash back after it reaches its limit.
+This stops that from happening.
+Don't add this to the keyframes, add it next to duration
+* `animation-fill-mode: forwards;`
+* just setting this is nice, but it still snaps back after you move off it, so you will need to do another one like it for when it's deselected
+
+==== Animation movement
+Use the offset properties to make things move.
+
+==== animation iteration count
+this can be set to any number, or infinite
+* `animation-iteration-count: infinite;`
+
+==== animation timing keywords
+`animation-timing-function`
+* sets how quickly an animation changes over a duration
+examples::
+* linear
+* ease-out
+* cubic bezier (do things like start faster and go slower midway through)
+** `animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)`;
+cubic-bezier to ease out::
+`animation-timing-function: cubic-bezier(0, 0, 0.58, 1);`
+cubic-bezier to simulate juggling::
+`animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);;`
+
+[IMPORTANT]Remember that all cubic-bezier functions start with p0 at (0, 0) and end with p3 at (1, 1). In this example, the curve moves faster through the Y-axis (starts at 0, goes to p1 y value of 0, then goes to p2 y value of 1) than it moves through the X-axis (0 to start, then 0 for p1, up to 0.58 for p2)=== id artributes
 * especially useful for javascript
 * these must be unique
 * use # in the css
@@ -40,8 +110,39 @@ Fallbacks::
 This is especially important for old browsers.
 * Set fallbacks before the preferred one
 
+== Colour
+
+linear-gradient::
+`background: linear-gradient(gradient direction, colour 1, colour 2, colour 3, ....)`
+
+repeating-linear-gradient::
+`background: repeating-linear-gradient(24deg, colorName #px, colorName #px, etc);`
+same as linear-gradient but used to create a repeating pattern, set the thickness of the items
+* create a linear color gradient
+1. specify direction from which colour transitions in degrees
+2. specify colours in whatever type
+
+background::
+set the background to a colour, patter, url etc
+
+transform::
+`transform: scale(2.1)`
+this will make the element scale up 2.1 times the original size
+* instead of scale you can use **skewX** or **skewY**
 == Layout
 
+=== Position
+relative:: 
+not removed from the natural flow. relative to what's around it and it's container
+** works with offset properties. offset works by offsetting it from where it would be positioned in the normal flow
+absolute::
+remove from the natural flow. 
+** item is locked in position in relation to it's parent container
+** works with offset properties 
+fixed::
+A type of absolute positioning where the element is removed from the natural flow of the document
+* Great for fixing something to the top or bottom of the page
+* will go away with scroll
 Padding::
 controls space between element's content and its border
 * Can be specified in one line, clockwise.
@@ -52,12 +153,53 @@ space between an element's border and surrounding elements
 * use negative space to make an element grow larger
 * can be specified in one line clockwise just like padding
 ** `margin: top right bottom left;`
+
+=== Units
+* rem is good for **padding** when you want it to adjust in relation to the font-size
+** use this for padding especially around clamp units
+** ems can be used too, but they will adjust to a more localized font specification.
+* viewport units are generally only used for global layout because they are relevant to the size of the while viewport
+rem's are more useful.
+
 == Typography
 
-=== link external fonts
+=== Font size and line height
+* Use px to define line height and font size
+* **Don't use default line height, 1.2 to 1.5 minimum**
+* use rem over em because em is relative to the font size of the parent or width vs rem.
+Rem is relative to the root element
+* rem is based on the default font size
+* em's don't change based on font size, they change based on 16 pixels
+* see best practices sheet link:https://sait-wbdv.github.io/winter-2021/cheatsheets/units/[Font sie best practices]
+* font-size: clamp(12px, 3vw, 24px);
+** this is useful for setting font size to have flux depending on viewport size
+* ch is relevant to the size of the font-family that has been used
 
+==== Units and Values
+* also chcek on Mdn docs.
+However keep in mind that there are actually only relative lengths.
+
+max-content::
+maximum width that a content can take up.
+It will get rid of word wrapping, so use intelligently.
+
+
+=== font-variant
+small-caps is a useful setting for font-variant if you wanted caps but not make it look like you're screaming
+
+=== Font contrast ratio
+* this is important for accessibility and overall pleasantness
+
+
+
+
+=== link external fonts
 Link to HTML::
 `<link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">`
+Preload::
+`link rel="preload" href="https://fontwebsite"`
+* This will make the site where the font is loading from load 
+* run this before the stylesheet rel in a different link tag
 
 == Images
 
@@ -78,3 +220,26 @@ Rounded Corners::
 em::
 size based on the size of an elements font.
 If used to set a font-size, it is relative to the parent's font size
+
+== Blur and Colors
+This is a complex property that gives control of an elements shadow
+
+Example code::
+`box-shadow: offset-x offset-y blur-radius color;`
+* multiple box shadows can be created using a comma to separate them
+offset-x::
+push shadow horizontally
+
+offset-y::
+push shadow vertically
+
+blur-radius::
+how far the blur goes
+
+color::
+set color of shadow
+
+=== Opacity
+* Value of 1 is opaque
+* 0.5 is half see through
+* 0 is completely transparent

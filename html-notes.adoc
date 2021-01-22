@@ -38,3 +38,25 @@ Code examples and descriptions of different tags
 
 == head
 Used for metadata
+
+== hr
+Use this to create line elements that span the width of a container element
+
+== box-shadow
+This is a complex property that gives control of an elements shadow
+
+Example code::
+`box-shadow: offset-x offset-y blur-radius color;`
+* multiple box shadows can be created using a comma to separate them
+offset-x::
+push shadow horizontally
+
+offset-y::
+push shadow vertically
+
+blur-radius::
+how far the blur goes
+
+color::
+set color of shadow
+
