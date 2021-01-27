@@ -1,0 +1,48 @@
+= Coding Lifecycle and Best Practices
+
+Tips for improving your coding methodology.
+
+.Plan your Coding Day
+* Before starting, come up with your goals
+* Use taskwarrior
+* Keep it macro, specifics are for step 2 of the coding lifecycle
+* Clarify briefly on purposes of goals.
+
+NOTE: Is it a production goal, a learning goal, a practice goal? These all have different scopes and if one is a higher priority, note that to help keep perspective
+
+.The Coding Lifecycle
+1. Understand the problem
+2. Plan it out
+3. Brute force a solution
+4. Walk-through
+5. Optimize
+6. Clean up and prep
+7. Deploy
+
+== Walk Thorugh
+
+This is really important to do, it can be easy to leave your code after the brute force phase, but you should always take a break between brute force and this phase.
+
+IMPORTANT: Take a break from coding before doing this stage.
+But do it at least in part on the same day, even if it's just putting in comments to tell yourself what to optimize the next day.
+
+== Optimize
+
+Fix up code, make it elegant, and make sure everything works
+
+.General Optimization
+* Run it through a code checker
+* 
+
+.CSS Organization
+* Set spaces between logical groupings
+1. layout
+2. look and feel
+3. typography
+
+== Clean up and Prep
+* Final checks on code
+* document what you need to do the next day
+** important tasks to taskwarrior
+
+
