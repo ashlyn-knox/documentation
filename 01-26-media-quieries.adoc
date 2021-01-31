@@ -1,0 +1,28 @@
+= Media Queries and Mobile First Design
+== General Notes
+* specify that the media is for screen
+@media screen and (min-width: ###px) {
+        body {
+        color: red;
+        }
+}
+* meta name="viewport" content="width=device, initial-scale=1"
+* When designing for internet explorer and older browsers, use media queries to remove complex formatting. Look at Jen Simmons video on how to do this.
+* Adjust landscape orientation with @media. Not a big thing, but possibly useful
+* also consider adjusting based on aspect ratio -- look this up for more information
+
+== Breakpoints
+* create size and media queries based on breakpoints instead of screen width.
+* To stop things from breaking, you can specify your media-query with both min and max width.
+** It's better to tell code when to fire and when not to fire to avoid things from breaking
+
+== Fonts
+* remember to use clamp
+
+== Specificity
+* avoid id selectors
+* Only use !important with bootstrap or other libraries that are constricting
+
+=== Type selectors
+* type selectors should be used as base resets.
+

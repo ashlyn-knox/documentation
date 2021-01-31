@@ -1,0 +1,34 @@
+= Flexbox Notes
+Information on how to use flexbox
+
+== Quick Notes
+* use floats to wrap text around images
+* often have nav as sibling to the header instead of the child of the header
+
+IMPORTANT:: When using flexbox, use flexbasis instead of width and height.
+Also Use min-width/min-height and max-width/max-height to customize sizes.
+
+== Flex-basis
+.Notes
+The Optimum size of a flex item along the main axis
+* auto: uses the size of its content
+* This will default to the content size
+* set this and then affect it with grow and shrink
+
+=== Code Tips
+.A way to set everything to even columns
+* set the container to display: flex;
+.container > * {flex-basis: 100%;}::
+* set the items to fill full space with 
+
+NOTE: Set min height with something like that
+
+flex-grow::
+* Grow will add space to the items for the right
+* if there is extra space in the container, you can make an item fill more of the space
+
+flex-shrink::
+* Shrink will give up space and move end of item to the left
+* **like flex-grow this will manage extra space**
+
+NOTE: Use flex-wrap to deal with overflow from grow and shrink by making things go to the next line
