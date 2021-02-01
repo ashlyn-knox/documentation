@@ -159,7 +159,7 @@ Variables defined as var vs const and inside our outside fo functions will be ab
 Global Scope::
 A variable defined globally can be seen everywhere
 
-.Local Scope::
+Local Scope::
 These variables are only visible within its function
 
 NOTE: the same name can be used for different global and local variables. It will prioritize the local variable.
