@@ -1,0 +1,80 @@
+= How to use podman
+
+== Basic Steps
+Basic Commands and functionality for using podman
+
+=== Setting up a Pod
+.Command List 
+* podman run
+* podman pod create
+* podman pod inspect
+* podman exec
+* podman pod list
+* podman ps
+* capsh --print
+
+.Create a new pod
+podman pod create::
+will create a new pod with a generic name.
+
+podman pod create --name podName::
+replace podName with the name that you want to give your new pod
+
+.Check pod information
+podman pod list::
+This will show the pod ID, name, status, datetime created, and # of containers.
+* The container shown by this command without you having created it is a infra container
+
+podman ps::
+List creating and running containers
+
+-a::
+added to podman ps to show all containers
+
+podman ps -a --pod::
+To view individual containers within a pod. the --pod shows the pods names.
+
+=== Add and modify containers
+
+podman run::
+run a process in a new container. podman run starts a process with its own filesystem, networking, and isolated process tree. **Podman run has more options than any other Podman command**
+
+podman run -it --rm --pod podName fedora /bin/bash::
+Example: I need to learn more about these options. However this creates a basic fedora filesystem inside a pod.
+
+it::
+
+dt::
+
+-rm::
+
+--pod::
+
+.Drop capabilities from a container
+podman run -it -d --name containerName --cap=drop all programName
+
+.Examine Containers
+Inspect command options allow you to also look at the privileged access levels of containers from outside and inside the container.
+
+podman pod inspect [pod's name/id]::
+This will show a detailed configuration of the pods that are running
+
+podman exec -it podmanIdNumber capsh --print::
+Show capabilities granted to a container
+
+.Stop a pod from running
+You will need the name or id of the pod to stop it.
+
+podman pod stop podName::
+This is the basic stop command
+
+=== 
+
+== Notes
+infra container::
+Created when a pod is made. An infra container is used to hold the namespaces associated with the pod. They are used to connect other containers to the pod, and to allow the pod to run when all it's containers have been stopped.
+
+capabilities::
+**Namespaces** isolate a container's processes from access to the resources of its host as well as other containers running on the same host. If a process is within a **privileged container**, it might be able to have some sudo access like IP routin tables and loading kernel modules. 
+* Capabilities allow one to apply finer-grained restictions on what resources the proceses within a container can access or alter. **This applies to privileged containers as well as unprivileged containers**.
+* They also make it so u can assing privileges to unprivileged containers.
