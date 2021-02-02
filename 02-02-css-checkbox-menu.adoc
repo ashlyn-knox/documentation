@@ -37,8 +37,7 @@ input[type=checkbox]:checked ~ label {}::
 Style what the actual clickable icon will do and look like when clicked here
 * add a class to the label and stylize how it looks here.
 
-=== Limitations
-- note after writing out the complicated version and test its functions within this one
+NOTE: Be aware of what is being selected to animate.
 
 == Slide in Approach
 Built off the logic of the simple approach but also including some other methods that could be used instead of the above version.
@@ -114,4 +113,33 @@ most important for functionality
 - **opacity: 0;** make it insible
 
 === Animations
+Add to the following declarations
 
+.nav-wrapper span::
+set your animation movements etc here
+* **transform-origin: 0px 0px** to set position
+* **transition: transform time(s) cubic-bezier(0.77,0.2, 0.05,1.0)** works well
+- within this transition declaration, also set background and opacity, opacity can be a little longer (like 2-3s). One of the ease's works best with the above cubic-bezier
+
+.Set transform origin
+This doesn't seem as necessary, but set the origins by calling
+* nav-wrapper span:first-child:: { transform-origin: 0% 0%; }
+* nav-wrapper span:th-last-child(2) { transform-origin: 0% 100%; }
+
+==== Create Crossmark
+Creating the shape for when the checkmark is checked
+.Top line
+nav-wrapper input:checked ~ span::
+* **transform: rotate(45deg) translate(-2px, -1px);** to rotate the spans by 45 degrees, translate adjusts the actual position to account for rotation
+* make sure that **opacity: 1;** -- but potentially not necessary
+* **background-color** may need to be changed depending on what's going on with the background
+
+.Bottom Line
+nav-wrapper input:checked ~ span:nth-last-child(2)::
+transform: rotate(-45deg) translate(0, -1px);
+* this will rotate it the oposite and accont for changing placement based on rotation **this may be able to be messed with through the transform origins that were set on the spans**
+
+.Hide the middle line
+.nav-wrapper input:checked ~ span:nth-last-child(3)::
+* opacity 0
+* transform: rotate by 0 deg and make small with scale (0.2 works well)
