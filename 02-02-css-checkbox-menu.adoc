@@ -143,3 +143,8 @@ transform: rotate(-45deg) translate(0, -1px);
 .nav-wrapper input:checked ~ span:nth-last-child(3)::
 * opacity 0
 * transform: rotate by 0 deg and make small with scale (0.2 works well)
+
+== Attributions
+Everything in this document comes from examining the following two sources
+* link:https://codepen.io/erikterwan/pen/EVzeRP[Code Pen Css Hamburger fold out Menu]
+* link:https://css-tricks.com/the-checkbox-hack/[Css-tricks checkbox hack]
