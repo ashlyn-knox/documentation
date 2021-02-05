@@ -1,5 +1,5 @@
 = Javascript Basics
-Author Name ashlyn
+Author: ashlyn
 
 This will be a beginners javascript cookbook. I will try to organize definitions and commands in a functional way.
 
@@ -19,7 +19,17 @@ These variables cannot be redefined
 
 NOTE: whether you define a variable locally or globally is very important with how you can call it
 
+== Data Types
+* string
+* integer
+* boolean
+* float
+* character
 
+=== Useful functions for variables
+* typeof - use to determine what type of data a variable is
+
+NOTE: try creating a compareEquality() function using an if statement with === operator
 == Strings
 
 .Appending Variables to strings
@@ -164,5 +174,50 @@ These variables are only visible within its function
 
 NOTE: the same name can be used for different global and local variables. It will prioritize the local variable.
 
+== If/Else Statements and Boolean
 
 
+=== Booleans
+Boolean::
+Use boolean expressions like little on and off switches
+
+=== Comparison Operators
+==::
+An equality operator. This returns true if they're equivalent and false if they aren't. It will test across different datatypes. such as 1 == "1";
+
+===::
+strict equality operator. no type conversion, more accurate equality test.
+
+!=::
+Not operator, or unequal
+
+!==::
+Strict inequality operator
+
+>::
+Greater Than
+
+<::
+Less Than
+
+>=::
+Greater Than or Equal To
+
+<=::
+Less than or equal to
+
+=== Logical Operators
+
+&&::
+logical and operator. if both statements are true,then the && returns true
+
+||::
+Logical or operator. if one of the statments returns true, then it is true.
+
+=== If/Else syntax
+
+if (condition is true) {
+  execute statement
+}
+else return false (else notation is assumed)
+* 
