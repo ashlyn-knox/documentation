@@ -1,8 +1,6 @@
 # Checkbox Hack
 
-Hack your css for fabulous functionality
-
----
+Hack your css for fabulous functionality. The first method is quicker and easier, the second gives much greater control.
 
 ## Method 1
 
