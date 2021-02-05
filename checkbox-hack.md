@@ -1,6 +1,6 @@
-# Checkbox Hack Code Snippits
+# Checkbox Hack
 
-The checkbox hack give you useful click control of html elements with css. Note this can also be done with radio buttons to give more options.
+Hack your css for fabulous functionality
 
 ---
 
@@ -33,7 +33,7 @@ The checkbox hack give you useful click control of html elements with css. Note 
 * **Not necessary Step** | customize unchecking interaction
    - `.wrapper input:not(:checked) ~ * ~ .content-container {}` 
    
-   #### Styling
+#### Styling
    
    * Style the label when checked -- `.wrapper input:checked ~ label {}`
    
