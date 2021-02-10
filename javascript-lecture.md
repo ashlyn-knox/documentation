@@ -97,7 +97,52 @@ useful for giving user feedback when they interact with an element. good for tip
 * blur: fires for a specific DOM node when element **looses** focus
 
 ### Mouse Events
+**NOTE: Remember to use onclick when calling. like target.onclick**
 When the mouse moves over or clicks an event. These actions respond differently for touch screen devices.
 * click: user clicks or presses enter when element is focused. On touch screen, single tap is like a left click
 * dblclick: double click. touch screen is a double tap
-* 
+* mouseup: when user releases a mouse button. for touch screen use a touchend event
+* [mousedown](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event): when user clicks down on a mouse button
+* mouseover: when user moves cursor over the element from outside the element boundary
+* mouseout: when user moves cursor that was inside the element boundary to outside of it
+* mousemove: fires when teh user moves the cursor around the element. triggers frequently.
+* onclick: triggers on mouse click
+* ondrag: triggers when element is dragged
+* onfocus: triggers when a window gets focused
+
+
+### Keyboard Events
+* remember to use syntax like .onkeydown to call 
+* [input](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event): fires when the value of an <input> or <textarea> changes. for older browsers, keydown works as a fallback
+* keydown: fires when user presses a key, if the user holds a key down, it fires rapidly.
+* keypress: fires when user presses a key taht results in printing a character on the screen.
+* keyup: fires when user releases a key on the keyboard
+
+### Form Events
+These are useful when using forms on a webpage.
+* submit: fires when the user submits a form
+* change: fires when the status of form elements change. **better than using click event because clicking isn't the only way that a user interacts with the form**
+* [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input): common with forms. focus and blur are sometimes used with forms in conjunction with elements like **links**
+
+### HTML5 Events
+* **TODO adjust this as I use different events**
+Page Level events. **Useful to this course**
+* [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event): Triggers when the Dom tree forms. attach to the window or document objects. **NOTE: Link provided is to document DOM content loaded, there is also documentation on** [Window: DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+* hashchange: fires when URL hash changes without refreshing the entire window. It works on teh window object and fires with **anchors** as they are hashes.
+* beforeunload: fires on window object before the page unloads
+
+### CSS Events
+* **TODO Adjust this as I use different events**
+Some Common css events are
+* transitioned: when a css transition ends a program. notifies teh script of the end of transition.
+* animationstart: fires when a css animation starts in the program
+* animationiteration: occurs when an animation repeats
+* animationend: occurs when an animation finished. Good for notifications to the user that need to happen in relation to a finished animation
+
+### Mutation events and observers
+**Not very relevant to the course at time of writing**
+When the structure of the DOM tree changes, it triggers a mutation event. 
+* DOMNodeInserted: when script inserts a new node in the DOM tree with: **appendChild()**, **replaceChild()**, **insertBefore()** etc.
+* DomNodeRemoved: when a script removes an existing node
+* DomSubtreeModified: when structure fo Dom tree changes
+
