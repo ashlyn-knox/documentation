@@ -26,6 +26,22 @@ NOTE: whether you define a variable locally or globally is very important with h
 * float
 * character
 
+== Recursion
+A function can be expressed in terms of itself. The function can call itself directly or indirectly resulting in a **recusive function**
+
+.example from codecamp
+function multiply(arr, n) {
+  if (n <=0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) * arr[n-1];
+  }
+}
+
+* In this example, the base case returns 1, but anything larger than n the function calls itself.
+
+IMPORTANT: get more clarification on this topic
+
 === Useful functions for variables
 * typeof - use to determine what type of data a variable is
 
@@ -137,6 +153,25 @@ Add elements to the front of the array. Just like push but for the beginning of 
 arrayName.unshift("Inserted information");::
 This would make the string "Inserted information the content of arrayName[0]"
 
+=== Accessing Nested Arrays
+You can nest arrays and access values from nested arrays just like you would with nested objects.
+
+.Example of a nested array
+var arrayName = [
+{
+  variableName: "value",
+                  nestedArray: [
+                  "value1",
+                  "value2",
+                  "value3"
+                  ]
+}
+// can put more content here
+]
+
+.How to access the nested array
+arrayName[0].nestedArray[2]; // value2
+
 == Functions
 Declare a function to use again
 
@@ -220,4 +255,138 @@ if (condition is true) {
   execute statement
 }
 else return false (else notation is assumed)
-* 
+ 
+== Switch Statements
+These are used to specify values when you have multiple options to choose from.
+**switch statements** test **case statements**. When the first match is made, a statemet is executed.
+
+=== Syntax
+switch(valueToBeTested) {
+  case "firstValue":
+  //execute code;
+  break; // finishes that statement
+  case "secondValue":
+  //execute code;
+  break; // finishes this statement
+}
+
+NOTE: You can set a default statement with the code at the end, like an else in a if/elseif else loop
+default:
+defaultStatement;
+break;
+
+=== Multiple switch cases with the same variables
+write all the cases without breaks or arguments down, then at the end of that group write what those variables are to be equal to
+
+== Objects
+Similar to arrays but do not use an index. Data in objects are accessed through properties
+
+* Syntax
+var objectName = {
+  "propertyName": "Value",
+  "propertyName": "Value",
+  "propertyName": ["can", "be", "an", "array"]
+};
+
+NOTE: Non-string properties will be automatically made into strings. And one word properties don't need quotes
+
+* Objects can replace switch statements that are used like dictionaries. Their key-value relationship makes them perfect for this sort of thing. then they can be searched through effectively with syntax like **var result = objectName[variableName];**  Remember that the variableName needs to be that what you are looking for
+=== Access properties
+* With Dot Notation
+- for when you know what the property name is
+* With []
+- for when the property has more than one word
+
+* When you are accessing the value, don't use quotes. quotes are for when you want to access the variable name.
+
+IMPORTANT: you can assign a value to a variable, then use that variable to reference objects that you already know have that value in them.
+
+* new values can be added to properties at any time
+* new properties can be added to an object at any time
+* The command **delete**  can be used to delete a property at any time
+
+=== Testing for properties
+.hasOwnProperty(propertyName)::
+This is useful for searching for whether or not a propertyexists. it returns a true or false
+
+=== Accessing Properties
+* link properties together down their chain when accessing different ones. ex: **objectName.property1.property2["desired values"]
+
+
+== While Loop
+Make something loop continuously until a condition is satisfied
+
+.example fill an array with a countdown from 5
+myArray = [];
+var i = 5;
+while(i >= 0) {
+  myArray.push(i);
+  i--;
+}
+
+== For loop
+make something loop a specific number of times
+
+.example to fill an array from 1 to 5
+myArray = [];
+
+for (var i = 1; i <=5; i++) {
+  myArray.push(i);
+}
+
+NOTE: for loops can iterate in different increments. such as i +=2 to increment in 2s. They can also decrement. remember if you're going down to start with i at the high number.
+
+=== Iterating through an array with a for loop
+
+.example
+var arrayName = [10, 9 ,8, 7, 6];
+for (var i = 0; i < arr.length; i++) {
+  console.log(arrayName[i]);
+}
+
+IMPORTANT: Remember that arrays are 0 indexed and that length - 1 is the last index of the array.
+
+.Nesting For Loops
+These are useful for multi-dimensional arrays. Put one loop inside the other and have their iterative variables correlate to their respective array positions. ex: arr[i][j] - the first for loop would iterate on i, the second on j
+
+== Do while loop
+This is like a while loop but it will **do** one pass of the code in the loop no matter what regarding the condition. if the while loop is true then it'll continue to do its thing.
+
+.example
+do {
+  myArray.push(i);
+  i++;
+} while (i <5);
+
+* it's like a while loop but with the action being placed first
+
+== Math Functions
+
+math.random::
+returns a decimal value between 0 and 1
+
+math.floor()::
+round a number down to the nearest integer
+
+parseInt()::
+Breaks down a string and returns an integer. It takes a second argument called **radix** that specifies the base number of the string. Radix can be an integer between 2 and 36.
+* Syntax: parseInt(string, radix);
+
+.Generate a random whole number within a range
+Specify a min and max number
+
+Math.floor(Math.random*() * (max - min + 1)) + min::
+This will specify a range. use static numbers of variables for the min and max points
+
+== Ternary Operators
+these can really simplify down your code
+
+condition ? expression-if-true: expression-if-false;::
+Follows a basic if/else statement
+
+IMPORTANT: If you do multiple ternary operators at once, put them all on separate lines
+
+.example
+(condition1) ? "return statement"
+: (condition2) ? "return statement"
+: (condition3) ? "return statement"
