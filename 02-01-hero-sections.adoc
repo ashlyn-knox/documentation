@@ -1,0 +1,37 @@
+= Hero sections
+
+
+.Block Level Elements
+
+Centering on inside vs outsite::
+* margin auto will center from inside out
+** Block level elements auto will default to 0
+* text-align: center; will center from outside in
+* flexbox will rewrite how margin works -- it allows you to center an element easily by setting margin to auto
+
+NOTE: margin: auto; in a flex item will center it in it's container. setting align-items and justify content will do the same **But gives you control over other elements**
+
+.Inline Elements
+* cannot have a width
+
+== Enhance Designs
+* blur filters
+* gradients
+* blend modes
+* filter
+- blur
+- contrast
+- grayscale
+- hue-rotate
+- drop-shadow
+
+== background settings
+* background-repeat: no-repeat;
+* background-position: ;
+background-size: auto ##rem;
+** only set one size and let the other stay as auto. Otherwise you'll get contortions
+
+== Notes
+* setting min-height instead of height is important for responsiveness
+* for definition lists, use <dl></dl> with <dt></dt> nested inside for the item title and <dd></dd> for the definition
+

@@ -9,7 +9,14 @@
 * Window object: global object that contains everything
 * Property: A variable that lives inside an object. access with dot notation
 * A function that lives inside an object.
-
+* syntax error: spelling errors in the code
+* logic error: when your syntax is good but it's programmed to actually do something different from what you intended
+* variable: a javascript value
+* operator: symbol for performing operation, such as * + - = < >
+* Operand: values that are acted upon
+* primitive value types: undefined, null, boolean, string, number
+* expression: a piece of code that does something
+* 
 ## Script Tags
 * put scripts under tags that they affect so that the page can render first
 

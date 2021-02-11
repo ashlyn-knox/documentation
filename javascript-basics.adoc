@@ -368,6 +368,9 @@ returns a decimal value between 0 and 1
 math.floor()::
 round a number down to the nearest integer
 
+Math.min() & Math.max()::
+find lowest and highest values in a list of arguments
+
 parseInt()::
 Breaks down a string and returns an integer. It takes a second argument called **radix** that specifies the base number of the string. Radix can be an integer between 2 and 36.
 * Syntax: parseInt(string, radix);
