@@ -1,7 +1,7 @@
 # Javascript Basic String Manipulation
-Simple in concept, but really specific in what they do
+An overview of useful string methods, regular expressions, and how to access and apply them.
 
-# String Methods
+## String Methods
 
 ### charAt()
 use this to check what char is located at what position. specify the index position
@@ -80,3 +80,29 @@ cut white space from front and end of a string. helpful to use with split for wo
 
 ## Regular Expressions
 To be added
+
+## Applications
+
+### With a template literal in a function
+1. outside the function specify your query selector for your template literal and any selectors for your functions
+`const textInput = document.querySelector('#textarea-id');`
+`const wordCount = document.querySelector('.word-count');`
+2. create your function. This one is attached to a textarea input
+`text.addEventListener('input', () => {
+
+});`
+3. add your variable to the event listener function. this will make it so that when the event is triggered, your value will update. This one will add text to the innerHTML of your word-count class. innerText also works here
+`wordCount.innerHTML = ${text.value.split(' ').length} : Words`
+* NOTE: the symbol used for template literals is also used for marking code in markdown. so the string literal ones aren't being used here but need to be.
+4. end result
+`text.addEventListener('input', () => {
+wordCount.innerHTML = ${text.value.split(' ').length} : Words
+});`
+
+* use value to access the actual text within a variable
+
+### Getting attributes
+a bunch of attributes can accessed from strings. This example takes 'maxlength' which has been specified in the html already.
+`const limit = text.getAttribute('maxlength');`
+* Find more at [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+
