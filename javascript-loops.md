@@ -12,6 +12,39 @@ Manual looping method, most control of how the loop itself operates but not nece
 `for (let i = 0; i < arrayName.length; i++) {
     // assign content per iteration
 }`
+* if the condition is true, it'll run the statement, if it's false it'll stop
+* incrementation can be specified like `i += 10` to increment by 10s
+
+### Down Staircase
+This is much easier to code. you just add an extra * for every line
+`for (let line = "*"; line.length <=5; line+="*") {
+    console.log(line);
+}`
+* this can be made more dynamic by running it as a function like the staircase below and making the 5 a variable that the function takes
+``*
+**
+***
+****
+*****`` 
+
+### Inverted staircase
+This uses arrays to create a staircase
+
+`const stairCase = n => {
+    // define array for each line. use .fill to set the starting content as blank spaces
+    const line = Array(n+1).fill(' ');
+    //for loop -- i starts at 1 less than n, iterate down to 0
+    for (let i = n -1; i > 0; i--) {
+        line[i] = "*";
+        console.log(line.join(''));
+    }
+}`
+* if n is 5 this will print
+``    *
+   **
+  ***
+ ****
+*****``
 
 ## forEach Loops
 These are used with arrays
