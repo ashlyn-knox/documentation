@@ -47,6 +47,30 @@ This uses arrays to create a staircase
 *****``
 * Review how to use the [fill method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill).
 
+### FizzBuzz
+`const fizzBuzz = n => {
+// check for null
+    if (n == null) {
+    return 1;
+    }
+// initialize variable
+    let answer;
+// check if n is divisible by 3 and 5
+    if ((n % 3 === 0) && (n % 5 === 0)) {
+        answer = "FizzBuzz";
+// check if n is divisble by 3
+    } else if (n % 3 === 0) {
+        answer = "Fizz";
+// check if divisible by 5
+    } else if (n % 5 === 0) {
+        answer = "Buzz;
+// if neither nor, return number
+    } else {
+        answer = n;
+    }
+    return answer;
+    console.log(answer);
+}`
 ## forEach Loops
 These are used with arrays
 
