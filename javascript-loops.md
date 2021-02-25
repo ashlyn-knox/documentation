@@ -45,6 +45,7 @@ This uses arrays to create a staircase
   ***
  ****
 *****``
+* Review how to use the [fill method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill).
 
 ## forEach Loops
 These are used with arrays
