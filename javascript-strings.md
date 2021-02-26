@@ -2,6 +2,7 @@
 An overview of useful string methods, regular expressions, and how to access and apply them.
 
 ## String Methods
+Use these for basic string editing.
 
 ### charAt()
 use this to check what char is located at what position. specify the index position
@@ -81,7 +82,7 @@ cut white space from front and end of a string. helpful to use with split for wo
 ## Regular Expressions
 To be added
 
-## Applications
+## Usage Examples
 
 ### With a template literal in a function
 1. outside the function specify your query selector for your template literal and any selectors for your functions
